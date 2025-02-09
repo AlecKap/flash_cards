@@ -2,7 +2,7 @@ require "./lib/turn.rb"
 require "./lib/card.rb"
 require "./lib/deck.rb"
 
-RSpec.describe Turn do
+RSpec.describe Deck do
   before :each do
     @card_1 = Card.new("What is the capital of Alaska?", 
                        "Juneau",
