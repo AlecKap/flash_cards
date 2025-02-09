@@ -12,7 +12,7 @@ def setup
   # @card_6 = Card.new("Who invented Rails?", "DHH", :Code_questions)
   # cards = [@card_1, @card_2, @card_4, @card_5, @card_6]
   cards = CardGenerator.new("cards.txt").cards
-  deck = Deck.new(cards.sample(rand(1..(cards.count))))
+  deck = Deck.new(cards.sample(rand(1..(10))))
   @round = Round.new(deck)
 end
 
