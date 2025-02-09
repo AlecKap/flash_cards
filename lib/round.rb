@@ -36,4 +36,26 @@ class Round
     num_of_cards_by_cat = @deck.cards.find_all { |card| card.category == category }.count
     (number_correct_by_category(category).fdiv(num_of_cards_by_cat) * 100).round(2)
   end
+
+  def last_guess_feedback
+    @turns.last.feedback
+  end
+
+  def num_of_cards
+    @deck.cards.count
+  end
+
+  def stats_feedback
+    if percent_correct >= 90
+      "WOW 100%!! That is pretty darn impressive!"
+    elsif percent_correct < 1
+      "wow... that's just embarrasing. Go read a book!"
+    elsif percent_correct >= 80
+      "Not bad! Not bad at all!"
+    elsif percent_correct >= 70
+      "Hey, that isn't terrible. It's ok to be average."
+    else 
+      "Come on... I know you can do better than that."
+    end
+  end
 end
