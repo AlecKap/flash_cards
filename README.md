@@ -1,3 +1,3 @@
 ##  Flash Cards
 
-This is the starter repository for the [Flash Cards](http://backend.turing.io/module1/projects/flashcards) project.
+To play this trivia game, run the command `ruby flashcards_runner.rb` in the terminal. Enjoy!
