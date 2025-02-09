@@ -121,4 +121,16 @@ RSpec.describe Round do
       expect(@round.percent_correct_by_category(:Geography)).to eq(100)
     end
   end
+
+  describe "#last_guess_feedback" do
+    it "provides feedback for the last turn" do
+      @round.take_turn("Juneau")
+
+      expect(@round.last_guess_feedback).to eq("Correct!")
+      
+      @round.take_turn("wrong answer")
+      
+      expect(@round.last_guess_feedback).to eq("Sorry, that is incorrect.")
+    end
+  end
 end
