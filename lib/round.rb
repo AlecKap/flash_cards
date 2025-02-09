@@ -16,7 +16,7 @@ class Round
   def take_turn(guess)
     turn = Turn.new(guess, @current_card)
     @turns << turn
-    if guess == @current_card.answer
+    if guess.downcase == @current_card.answer.downcase
       @number_correct += 1
       @correct_cat_answers << @current_card.category
     end
@@ -56,6 +56,13 @@ class Round
       "Hey, that isn't terrible. It's ok to be average."
     else 
       "Come on... I know you can do better than that."
+    end
+  end
+
+  def category_stats
+    cats = @deck.cards.map { |card| card.category }.uniq
+    cats.each do |cat|
+      puts "#{cat.to_s.gsub(/_/, " ").capitalize} - #{percent_correct_by_category(cat)}%"
     end
   end
 end
