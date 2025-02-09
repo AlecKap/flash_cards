@@ -7,8 +7,8 @@ def setup
   @card_1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
   @card_2 = Card.new("The Viking spacecraft sent back to Earth photographs and reports about the surface of which planet?", "Mars", :STEM)
   @card_4 = Card.new("How many Stanley Cups have the Chicago Blackhawks hockey team won?", "6", :Sports)
-  @card_5 = Card.new("Who invented Ruby?", "Yukihiro Matsumoto", :Code)
-  @card_6 = Card.new("Who invented Rails?", "DHH", :Code)
+  @card_5 = Card.new("Who invented Ruby?", "Yukihiro Matsumoto", :Code_questions)
+  @card_6 = Card.new("Who invented Rails?", "DHH", :Code_questions)
   cards = [@card_1, @card_2, @card_4, @card_5, @card_6]
   deck = Deck.new(cards.sample(rand(1..5)))
   @round = Round.new(deck)
@@ -64,10 +64,10 @@ def game_round
     print "."
     sleep(0.5)
     puts " #{@round.last_guess_feedback}"
-    sleep(1)
+    sleep(0.5)
     question_num += 1
   end
-  game_over
+  game_over_stats
   play_again?
 end
 
@@ -103,7 +103,7 @@ def play_again?
   end
 end
 
-def game_over
+def game_over_stats
   puts "******* GAME OVER ******* "
   sleep(1)
   puts "Here are some stats from your game."
@@ -119,6 +119,9 @@ def game_over
   puts "That's a whopping #{@round.percent_correct}%!"
   sleep(1.5)
   puts "#{@round.stats_feedback}"
+  puts "Here are some stats by category:"
+  sleep(1.5)
+  @round.category_stats
   sleep(3)
 end
 
