@@ -16,7 +16,7 @@ class Round
   def take_turn(guess)
     turn = Turn.new(guess, @current_card)
     @turns << turn
-    if guess.downcase == @current_card.answer.downcase
+    if turn.correct?
       @number_correct += 1
       @correct_cat_answers << @current_card.category
     end
