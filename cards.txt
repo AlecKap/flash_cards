@@ -109,7 +109,6 @@ What does the "C" stand for in CPU?,Central,Technology
 What is the name of the world's largest desert?,Antarctica,Geography
 How many points is a field goal worth in American football?,3,Sports
 What is the most widely consumed drink in the world after water?,Tea,Food
-What type of animal is a Komodo dragon?,Lizard,Science
 What is the capital of Brazil?,Brasília,Geography
 How many squares are on a chessboard?,64,Games
 What type of tree produces acorns?,Oak,Science
@@ -163,7 +162,6 @@ How many films are in the original Star Wars trilogy?,3,Movies
 What is the name of the process by which plants make their own food?,Photosynthesis,Science
 What is the name of the tallest building in the world?,Burj Khalifa,Geography
 Who was the lead singer of Queen?,Freddie Mercury,Music
-What is the largest desert in the world?,Sahara,Geography
 What is the longest bone in the human body?,Femur,Science
 Which animal is known as the "king of the jungle"?,Lion,Science
 What is the capital of Canada?,Ottawa,Geography
@@ -203,7 +201,6 @@ What is the deepest ocean in the world?,Pacific Ocean,Geography
 What element has the atomic number 1?,Hydrogen,Science
 Who was the first man to climb Mount Everest?,Edmund Hillary,Geography
 What year did the Titanic sink?,1912,History
-What type of animal is a Komodo dragon?,Lizard,Science
 What is the capital of Sweden?,Stockholm,Geography
 What is the largest island in the world?,Greenland,Geography
 Who was the first president of the United States?,George Washington,History
@@ -417,7 +414,6 @@ What is the capital of South Korea?,Seoul,Geography
 What is the capital of Egypt?,Cairo,Geography
 What is the most famous landmark in Paris?,Eiffel Tower,Geography
 What year did World War I start?,1914,History
-What is the largest desert in the world?,Sahara,Geography
 What is the chemical symbol for gold?,Au,Science
 How many legs does a spider have?,8,Science
 Who was the first woman to win a Nobel Prize?,Marie Curie,Science
@@ -522,7 +518,6 @@ What is the highest-grossing movie of all time?,Avatar,Movies
 How many legs does a crab have?,10,Science
 What is the symbol for the element lead?,Pb,Science
 What is the fastest marine animal?,Black Marlin,Science
-What is the largest desert in the world?,Sahara,Geography
 What year did the Berlin Wall fall?,1989,History
 How many languages are spoken in the world?,Over 7000,Language
 What is the world's longest wall?,Great Wall of China,Geography
