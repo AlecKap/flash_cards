@@ -4,6 +4,8 @@ require "./lib/deck.rb"
 require "./lib/round.rb"
 require "./lib/card_generator.rb"
 
+@rounds_played = 1
+
 def setup
   cards = CardGenerator.new("cards.txt").cards
   deck = Deck.new(cards.sample(rand(1..(10))))
@@ -21,7 +23,7 @@ def welcome
   end
   if player_answer == "y"
     sleep(0.5)
-    puts "Awesome... let's get started!"
+    puts "Awesome, let's get started!"
   else
     print "Oh "
     sleep(1)
@@ -31,11 +33,13 @@ def welcome
     sleep(1)
     print "."
     sleep(1)
-    print "."
-    puts " Ok goodbye then"
+    puts "."
+    sleep(0.5)
+    puts " Ok goodbye then!"
     sleep(1)
     puts " :("
     sleep(1.5)
+    system("clear")
     exit
   end
 end
@@ -59,7 +63,7 @@ def game_round
     sleep(0.5)
     print "."
     sleep(0.5)
-    puts " #{@round.last_guess_feedback}"
+    puts "#{@round.last_guess_feedback}"
     sleep(0.5)
     question_num += 1
   end
@@ -77,24 +81,25 @@ def play_again?
   end
 
   if play_again == "y"
+    @rounds_played += 1
     sleep(0.5)
-    puts "Awesome... let's play again!"
+    puts "That's what I'm talking about! let's play again!"
+    system("clear")
     sleep(1)
     game_round
   else
     print "Had enough have you?"
-    sleep(1)
+    sleep(0.5)
     print "."
-    sleep(1)
+    sleep(0.5)
     print "."
-    sleep(1)
-    print "."
-    sleep(1)
-    print "."
+    sleep(0.5)
+    puts "."
     puts " Ok goodbye then"
     sleep(1)
     puts " :("
     sleep(1.5)
+    system("clear")
     exit
   end
 end
@@ -110,6 +115,12 @@ def game_over_stats
   sleep(0.5)
   print "."
   sleep(1)
+  if @rounds_played == 1
+    puts "You have played a total of 1 round."
+  else
+    puts "You have played a total of #{@rounds_played} rounds."
+  end
+  sleep(1.5)
   puts "You got #{@round.number_correct} correct out of the #{@round.num_of_cards} questions!"
   sleep(1.5)
   puts "That's a whopping #{@round.percent_correct}%!"
