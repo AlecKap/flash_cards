@@ -74,7 +74,7 @@ RSpec.describe Round do
       expect(@round.turns).to eq([@new_turn])
     end
     
-    it "adds 1 to _number_correct if the guess is correct" do
+    it "adds 1 to number_correct if the guess is correct" do
       expect(@round.turns.count).to eq(1)
       expect(@round.number_correct).to eq(1)
       
